@@ -25,12 +25,6 @@
     background-color: var(--dark-gray);
 }
 
-.btn{
-    border-radius: 30px;
-    background-color: var(--light-gray);
-    color: var(--text-color);
-}
-
 header{
     background-color: var(--background-color);
 }
