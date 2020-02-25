@@ -1,0 +1,36 @@
+:root{
+    --background-color: #c12e22;
+    --text-color: #f9f9f9;
+    --light-gray: #888888;
+    --dark-gray: #333333;
+}
+
+.background-color{
+    background-color: var(--background-color);
+}
+
+.primary-color{
+    color: var(--background-color);
+}
+
+.text-color{
+    color: var(--text-color);
+}
+
+.light-gray{
+    background-color: var(--light-gray);
+}
+
+.dark-gray{
+    background-color: var(--dark-gray);
+}
+
+.btn{
+    border-radius: 30px;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+}
+
+header{
+    background-color: var(--background-color);
+}
