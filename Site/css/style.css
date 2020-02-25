@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 :root{
     --background-color: #c12e22;
     --text-color: #f9f9f9;
@@ -25,12 +27,19 @@
     background-color: var(--dark-gray);
 }
 
-.btn{
-    border-radius: 30px;
-    background-color: var(--light-gray);
-    color: var(--text-color);
+.btn {
+    background-color: #ffffff;
+    color: var(--background-color);
 }
 
 header{
     background-color: var(--background-color);
+    color : var(--text-color);
+    font-family: 'Open Sans';
+}
+
+footer{
+    background-color: #d7d7d7;
+    color: var(--dark-gray);
+    font-family: 'Open Sans';
 }
