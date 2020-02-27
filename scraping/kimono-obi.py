@@ -54,8 +54,11 @@ def scrapingKimonoObi():
     
 
 def saveData(data):
+    print("create or update scrapingKimonoObi.json")
     with open('scrapingKimonoObi.json', 'w+', encoding='utf-8') as outfile:
+        print("insert all the data scraped")
         json.dump(data, outfile)
+        print("done")
 
     
 
@@ -177,6 +180,7 @@ if __name__ == "__main__":
 
     
     saveData(bdd)
+    print("scraping of KimonoObi successful")
 
 
 
