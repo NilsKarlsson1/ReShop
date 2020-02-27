@@ -19,6 +19,14 @@
     color: var(--text-color);
 }
 
+.title-color{
+    color: var(--dark-gray);
+}
+
+.little-color{
+    color: var(--light-gray);
+}
+
 .light-gray{
     background-color: var(--light-gray);
 }
@@ -27,9 +35,24 @@
     background-color: var(--dark-gray);
 }
 
-.btn {
-    background-color: #ffffff;
+.btn{
+    background-color: var(--light-gray);
     color: var(--background-color);
+}
+
+.subheader{
+    background-color: #d7d7d7;
+    color: var(--dark-gray);
+    font-family: 'Open Sans';
+}
+
+.button {
+    background-color: #d7d7d7;
+    color: var(--dark-gray);
+}
+
+.dropdown-item {
+    font-size: 14px;
 }
 
 header{
