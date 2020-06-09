@@ -38,6 +38,10 @@
 .btn{
     background-color: var(--light-gray);
     color: var(--background-color);
+    border-radius: 4px;
+    font-family: 'Open Sans';
+    border: none;
+    outline: none;
 }
 
 .subheader{
@@ -49,10 +53,14 @@
 .button {
     background-color: #d7d7d7;
     color: var(--dark-gray);
+    border-radius: 4px;
+    font-family: 'Open Sans';
+    border: none;
+    outline: none;
 }
 
 .dropdown-item {
-    font-size: 14px;
+    font-size: 14vw;
 }
 
 .centrer {
