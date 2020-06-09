@@ -55,6 +55,11 @@
     font-size: 14px;
 }
 
+.centrer {
+    color: var(--dark-gray);
+    text-align: center;
+}
+
 header{
     background-color: var(--background-color);
     color : var(--text-color);
