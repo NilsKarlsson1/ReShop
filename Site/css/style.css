@@ -60,6 +60,12 @@
     text-align: center;
 }
 
+.foot {
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
 header{
     background-color: var(--background-color);
     color : var(--text-color);
