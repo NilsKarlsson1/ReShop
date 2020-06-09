@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
+    <title>Inscription</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -37,8 +37,26 @@
         <div>
             <div class="centrer">
                 <br>
-                <h2 class="centrer">Connexion</h2>
+                <h2 class="centrer">Inscription</h2>
+                <!-- civilité -->
+                <br>
+                <label>Civilité</label>
+                <input type="checkbox" class="primary-color" id="madame">
+                <label>Madame</label>
+                <input type="checkbox" class="primary-color" id="monsieur">
+                <label>Monsieur</label>
+                <!-- Nom -->
+                <br>
+                <br>
+                <label>Nom</label>
+                <input type="text" class="col-md-2 primary-color" placeholder="Nom">
+                <!-- Prénom -->
+                <br>
+                <br>
+                <label>Prénom</label>
+                <input type="text" class="col-md-2 primary-color" placeholder="Prénom">
                 <!-- adresse mail -->
+                <br>
                 <br>
                 <label>Adresse mail</label>
                 <input type="text" class="col-md-2 primary-color" placeholder="@mail">
@@ -49,12 +67,16 @@
                 <input type="text" class="col-md-2 primary-color" placeholder="Mot de passe">
                 <br>
                 <br>
-                <!-- connexion -->
+                <label>Confirmer mot de passe</label>
+                <input type="text" class="col-md-2 primary-color" placeholder="Mot de passe">
+                <br>
+                <br>
+                <!-- inscription -->
                 <button class="button" type="button">
-                   Connexion
+                   Inscription
                 </button>
                 <br>
-                <a href="./inscription.html">Déjà inscrit? Connectez-vous</a>
+                <a href="./connexion.html">Ou Connectez-vous</a>
 
             </div>
         </div>
@@ -62,7 +84,7 @@
     </main>
 
 
-    <footer class="foot">
+    <footer>
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <!-- recherche -->
