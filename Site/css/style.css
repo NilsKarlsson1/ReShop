@@ -38,6 +38,10 @@
 .btn{
     background-color: var(--light-gray);
     color: var(--background-color);
+    border-radius: 4px;
+    font-family: 'Open Sans';
+    border: none;
+    outline: none;
 }
 
 .subheader{
@@ -49,11 +53,45 @@
 .button {
     background-color: #d7d7d7;
     color: var(--dark-gray);
+    border-radius: 4px;
+    font-family: 'Open Sans';
+    border: none;
+    outline: none;
+}
+
+.btn-product {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    font-family: 'Open Sans';
+    border: none;
+    outline: none;
 }
 
 .dropdown-item {
     font-size: 14px;
 }
+
+.centrer {
+    color: var(--dark-gray);
+    text-align: center;
+}
+
+.foot {
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+.product {
+    width: 60%;
+}
+
+.description {
+    width: 40%;
+    margin-top: 14vw;
+}
+
 
 header{
     background-color: var(--background-color);
