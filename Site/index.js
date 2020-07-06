@@ -1,10 +1,17 @@
+// @ts-ignore
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
+var format = require('util').format;
 
+
+// @ts-ignore
 const express = require('express'),
 app = express(),
+client = new MongoClient(url, { useNewUrlParser: true });
+// @ts-ignore
 server = require('http').createServer(app);
 
+// @ts-ignore
 app.get('/', (req, res) => 
     {
      res.sendFile(__dirname + '/index.html')
@@ -12,76 +19,57 @@ app.get('/', (req, res) =>
 );
 
 
+// @ts-ignore
 app.get('/connexion', (req, res) => 
     {
      res.sendFile(__dirname + '/routes/connexion.html')
     }
 );
 
+// @ts-ignore
 app.get('/caddy', (req, res) => 
     {
      res.sendFile(__dirname + '/routes/caddy.html')
     }
 );
 
+// @ts-ignore
 app.get('/informations', (req, res) => 
     {
      res.sendFile(__dirname + '/routes/informations.html')
     }
 );
 
+// @ts-ignore
 app.get('/inscription', (req, res) => 
     {
      res.sendFile(__dirname + '/routes/inscription.html')
     }
 );
 
+// @ts-ignore
 app.get('/product', (req, res) => 
     {
      res.sendFile(__dirname + '/routes/product.html')
     }
 );
 
+// @ts-ignore
+app.get('/search', (req, res) => 
+    {
+     res.sendFile(__dirname + '/routes/search.html')
+    }
+);
+
+// @ts-ignore
 app.get('/profile', (req, res) => 
     {
      res.sendFile(__dirname + '/routes/profile.html')
     }
 );
 
-MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  var dbo = db.db("listArticle");
-  var myobj = { name: "Company Inc", address: "Highway 37" };
-  /* dbo.collection("customers").insertOne(myobj, function(err, res) {
-    if (err) throw err;
-    console.log("1 document inserted");
-    db.close();
-  });*/
-});
-
-const updateBDD = (req, res) => {
-  var dbo = db.db("listArticle");
-  
-  dbo.collection("article").updateBDD("scrapingKimonoObi.json", function(err, res) {
-    if (err) throw err;
-    console.log("1 document inserted");
-    db.close();
-  });
-  dbo.collection("article").updateBDD("ShinSekai.json", function(err, res) {
-    if (err) throw err;
-    console.log("1 document inserted");
-    db.close();
-  });
-  dbo.collection("article").updateBDD("scrapingFigurine.json", function(err, res) {
-    if (err) throw err;
-    console.log("1 document inserted");
-    db.close();
-  });
-};
-
-
 app.use(express.static(__dirname + '/'));
 app.listen(8081)
 console.log('http://localhost:8081')
 
-module.exports = updateBDD;
+
