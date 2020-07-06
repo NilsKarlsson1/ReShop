@@ -99,13 +99,13 @@ table {
   }
   
   td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid #d7d7d7;
     text-align: left;
     padding: 8px;
   }
   
   tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #d7d7d7;
   }
 
 header{
