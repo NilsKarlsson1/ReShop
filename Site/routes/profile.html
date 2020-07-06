@@ -136,9 +136,54 @@
 
 
     <main>
-
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2 my-md-3">
+                    <h4>Profil</h4>
+                    <br>
+                    <h6>Nom</h6>
+                    <input type="text" id="name_profile" class="form-control-sm" placeholder="Nom">
+                    <br>
+                    <h6>Prénom</h6>
+                    <input type="text" id="firstname_profile" class="form-control-sm" placeholder="Prénom">
+                    <br>
+                    <h6>Adresse mail</h6>
+                    <input type="email" id="mail_profile" class="form-control-sm" placeholder="@mail">
+                    <br>
+                    <h6>Adresse</h6>
+                    <input type="text" id="Adresse_profile" class="form-control-sm" placeholder="Adresse">
+                    <br>
+                    <h6>Numéro de téléphone</h6>
+                    <input type="tel" id="tel_profile" class="form-control-sm" pattern="0[0-9]{9}" placeholder="06xxxxxxxx">
+                    <br>
+                    <h6>Mot de passe</h6>
+                    <input type="password" id="password_profile" class="form-control-sm" placeholder="Nouveau mot de passe">
+                    <br>
+                    <h6>Confirmer mot de passe</h6>
+                    <input type="password" id="password_profile_confirm" class="form-control-sm" placeholder="Confirmer mot de passe">
+                    <br>
+                    <br> 
+                    <button type="submit" class="btn-product" type="button" id="button_profil">
+                        Modifier mon profil
+                    </button>
+                </div>
+            <div class="col-10 my-md-3">
+                <table>
+                    <tr>
+                      <th>Numéro de facture</th>
+                      <th>Date</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <td></td><!-- numéro de facture -->
+                      <td></td><!-- Date -->
+                      <td></td><!-- Boutton pour télécharger la facture -->
+                    </tr>
+                  </table>
+                </div> 
+            </div>
+        </div>
     </main>
-
 
     <footer>
         <div class="container-fluid">
