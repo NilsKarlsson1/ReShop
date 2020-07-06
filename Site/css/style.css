@@ -108,13 +108,13 @@ tr:nth-child(even) {
     background-color: #d7d7d7;
   }
 
-label {
+.label_profil {
     color: var(--dark-gray);
     font-family: 'Open Sans';
     display: table-cell;
 }
 
-input {
+.input_profil {
     display: table-cell;
 }
 
