@@ -93,20 +93,38 @@
 }
 
 table {
-    font-family: arial, sans-serif;
+    font-family: 'Open Sans';
     border-collapse: collapse;
     width: 100%;
   }
   
-  td, th {
+td, th {
     border: 1px solid #d7d7d7;
     text-align: left;
     padding: 8px;
   }
   
-  tr:nth-child(even) {
+tr:nth-child(even) {
     background-color: #d7d7d7;
   }
+
+label {
+    color: var(--dark-gray);
+    font-family: 'Open Sans';
+    display: table-cell;
+}
+
+input {
+    display: table-cell;
+}
+
+.row_profile {
+    display: table-row;
+}
+
+.form_profile {
+    display: table;
+}
 
 header{
     background-color: var(--background-color);
