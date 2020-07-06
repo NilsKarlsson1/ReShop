@@ -30,7 +30,7 @@
                     <input type="search" class="form-control form-control-md  primary-color" placeholder="Que recherchez-vous ?">
                     <div class="input-group-append">
                       <button class="btn" type="button">
-                        <i class="fa fa-search"></i>
+                        <i class="fa fa-search" onclick="window.location='/search';"></i>
                       </button>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-1">
                     <p class="my-md-4 text-color">
-                        Mon compte
+                        <a class="text-color" style="color:#f9f9f9" href="/profile">Mon compte</a>
                     </p>
                 </div>
                 <!-- panier -->
@@ -48,8 +48,8 @@
                     <img src="./assets/basket.png" class="img-fluid my-md-3" alt="Responsive image" width="45" height="45">
                 </div>
                 <div class="col-1">
-                    <p class="my-md-4 text-color">
-                        Panier
+                    <p class="my-md-4 text-color" href="/caddy">
+                        <a class="text-color" style="color:#f9f9f9" href="/caddy">Panier</a>
                     </p>
                 </div>
             </div>
@@ -431,7 +431,7 @@
                 </div>
                 <!-- Mentions -->
                 <div class="col">
-                    <h5 class="font-weight-bold"> <a href="./routes/informations.html" style="color:#333333"> Mentions légales </a> </h5>
+                    <h5 class="font-weight-bold"> <a href="/informations" style="color:#333333"> Mentions légales </a> </h5>
                 </div>
                 <!-- espace vendeur -->
                 <div class="col">

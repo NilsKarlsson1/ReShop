@@ -26,7 +26,7 @@
                     <h2 class="text-color">ReShop</h2>
                 </div>
                 <div class="my-md-3">
-                    <h2 class="text-color">Connexion</h2>
+                    <h2 class="text-color">Inscription</h2>
                 </div>
             </div>
         </div>
@@ -37,38 +37,55 @@
         <div>
             <div class="centrer">
                 <br>
-                <h2 class="centrer">Inscription</h2>
-                <!-- civilité -->
+                <h2>Inscription</h2>
+                
+                <div class="row inscription_centrer">
+                <div class="col-md-4 my-md-3 inscription_centrer form_profile">
+                    <!-- civilité -->
                 <br>
-                <label>Civilité</label>
-                <input type="checkbox" class="primary-color" id="madame">
+                <div class="row_profile inscription_centrer">
+                <label class="label_profil">Civilité</label>
+                <input type="checkbox" class="primary-color input_profil" id="madame">
                 <label>Madame</label>
-                <input type="checkbox" class="primary-color" id="monsieur">
+                <input type="checkbox" class="primary-color input_profil" id="monsieur">
                 <label>Monsieur</label>
+                </div>
                 <!-- Nom -->
                 <br>
                 <br>
-                <label>Nom</label>
-                <input type="text" class="col-md-2 primary-color" placeholder="Nom">
+                <div class="row_profile inscription_centrer">
+                <label class="label_profil">Nom : </label>
+                <input type="text" class="form-control-md primary-color input_profil" placeholder="Nom">
+                </div>
                 <!-- Prénom -->
                 <br>
                 <br>
-                <label>Prénom</label>
-                <input type="text" class="col-md-2 primary-color" placeholder="Prénom">
+                <div class="row_profile inscription_centrer">
+                <label class="label_profil">Prénom : </label>
+                <input type="text" class="form-control-md primary-color input_profil" placeholder="Prénom">
+                </div>
                 <!-- adresse mail -->
                 <br>
                 <br>
-                <label>Adresse mail</label>
-                <input type="text" class="col-md-2 primary-color" placeholder="@mail">
+                <div class="row_profile inscription_centrer">
+                <label class="label_profil">Adresse mail : </label>
+                <input type="text" class="form-control-md primary-color input_profil" placeholder="@mail">
+                </div>
                 <!-- mot de passe -->
                 <br>
                 <br>
-                <label>Mot de passe</label>
-                <input type="text" class="col-md-2 primary-color" placeholder="Mot de passe">
+                <div class="row_profile inscription_centrer">
+                <label class="label_profil">Mot de passe : </label>
+                <input type="text" class="form-control-md primary-color input_profil" placeholder="Mot de passe">
+                </div>
                 <br>
                 <br>
-                <label>Confirmer mot de passe</label>
-                <input type="text" class="col-md-2 primary-color" placeholder="Mot de passe">
+                <div class="row_profile inscription_centrer">
+                <label class="label_profil">Confirmer mot de passe : </label>
+                <input type="text" class="form-control-md primary-color input_profil" placeholder="Mot de passe">
+                </div>
+                </div>
+                </div>
                 <!-- inscription -->
                 <br>
                 <br>
@@ -76,7 +93,7 @@
                    Inscription
                 </button>
                 <br>
-                <a href="./connexion.html">ou connectez-vous</a>
+                <a href="/connexion">ou connectez-vous</a>
 
             </div>
         </div>
@@ -114,7 +131,7 @@
                 </div>
                 <!-- Mentions -->
                 <div class="col">
-                    <h5 class="font-weight-bold">Mentions légales</h5>
+                    <h5 class="font-weight-bold"> <a href="/informations" style="color:#333333"> Mentions légales </a> </h5>
                 </div>
                 <!-- espace vendeur -->
                 <div class="col">
@@ -122,7 +139,7 @@
                 </div>
                 <!-- logo -->
                 <div class="col">
-                    <img src="../assets/logo.png" class="img-fluid" alt="Responsive image" width="150" height="150">
+                    <img src="assets/logo.png" class="img-fluid" alt="Responsive image" width="150" height="150">
                 </div>
             </div>
         </div>
