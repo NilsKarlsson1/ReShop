@@ -138,48 +138,63 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-2 my-md-3">
+                <div class="col-md-4 my-md-3 form_profile">
                     <h4>Profil</h4>
                     <br>
-                    <h6>Nom</h6>
-                    <input type="text" id="name_profile" class="form-control-sm" placeholder="Nom">
+                    <div class="row_profile">
+                        <label>Nom : </label>
+                        <input type="text" id="name_profile" class="form-control-md" placeholder="Nom">
+                    </div>
                     <br>
-                    <h6>Prénom</h6>
-                    <input type="text" id="firstname_profile" class="form-control-sm" placeholder="Prénom">
+                    <div class="form-group row_profile">
+                        <label>Prénom : </label>
+                        <input type="text" id="firstname_profile" class="form-control-md" placeholder="Prénom">
+                    </div>
                     <br>
-                    <h6>Adresse mail</h6>
-                    <input type="email" id="mail_profile" class="form-control-sm" placeholder="@mail">
+                    <div class="form-group row_profile">
+                        <label>Adresse mail : </label>
+                        <input type="email" id="mail_profile" class="form-control-md" placeholder="@mail">
+                    </div>
                     <br>
-                    <h6>Adresse</h6>
-                    <input type="text" id="Adresse_profile" class="form-control-sm" placeholder="Adresse">
+                    <div class="form-group row_profile">
+                        <label>Adresse : </label>
+                        <input type="text" id="Adresse_profile" class="form-control-md" placeholder="Adresse">
+                    </div>
                     <br>
-                    <h6>Numéro de téléphone</h6>
-                    <input type="tel" id="tel_profile" class="form-control-sm" pattern="0[0-9]{9}" placeholder="06xxxxxxxx">
+                    <div class="form-group row_profile">
+                        <label>Numéro de téléphone : </label>
+                        <input type="tel" id="tel_profile" class="form-control-md" pattern="0[0-9]{9}" placeholder="06xxxxxxxx">
+                    </div>
                     <br>
-                    <h6>Mot de passe</h6>
-                    <input type="password" id="password_profile" class="form-control-sm" placeholder="Nouveau mot de passe">
+                    <div class="form-group row_profile">
+                        <label>Mot de passe : </label>
+                        <input type="password" id="password_profile" class="form-control-md" placeholder="Nouveau mot de passe">
+                    </div>
                     <br>
-                    <h6>Confirmer mot de passe</h6>
-                    <input type="password" id="password_profile_confirm" class="form-control-sm" placeholder="Confirmer mot de passe">
+                    <div class="form-group row_profile">
+                        <label>Confirmer mot de passe : </label>
+                        <input type="password" id="password_profile_confirm" class="form-control-md" placeholder="Confirmer mot de passe">
+                    </div>
                     <br>
-                    <br> 
-                    <button type="submit" class="btn-product" type="button" id="button_profil">
-                        Modifier mon profil
-                    </button>
+                    <br>
+                    <input type="button" class="btn-product" id="update_profil" value="Modifier mon profil">
+                    <br>
+                    <br>
+                    <input type="button" class="btn-product" id="update_profil" value="Supprimer mon profil">
                 </div>
-            <div class="col-10 my-md-3">
-                <table>
-                    <tr>
-                      <th>Numéro de facture</th>
-                      <th>Date</th>
-                      <th></th>
-                    </tr>
-                    <tr>
-                      <td></td><!-- numéro de facture -->
-                      <td></td><!-- Date -->
-                      <td></td><!-- Boutton pour télécharger la facture -->
-                    </tr>
-                  </table>
+                <div class="col-10 my-md-3">
+                    <table>
+                        <tr>
+                            <th>Numéro de facture</th>
+                            <th>Date</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td></td><!-- numéro de facture -->
+                            <td></td><!-- Date -->
+                            <td></td><!-- Boutton pour télécharger la facture -->
+                        </tr>
+                    </table>
                 </div> 
             </div>
         </div>
