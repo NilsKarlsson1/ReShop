@@ -11,13 +11,11 @@ client = new MongoClient(url, { useNewUrlParser: true });
 // @ts-ignore
 server = require('http').createServer(app);
 
-const path = require('path');
-app.use(express.static(path.join(__dirname)));
 
 // @ts-ignore
 app.get('/', (req, res) => 
     {
-     res.sendFile(path.join(__dirname, 'index.html'))
+     res.sendFile(__dirname + 'index.html')
     }
 );
 
@@ -25,14 +23,14 @@ app.get('/', (req, res) =>
 // @ts-ignore
 app.get('/connexion', (req, res) => 
     {
-        res.sendFile(path.join(__dirname, '/routes/connexion.html'))
+        res.sendFile(__dirname+ '/routes/connexion.html')
     }
 );
 
 // @ts-ignore
 app.get('/caddy', (req, res) => 
     {
-        res.sendFile(path.join(__dirname, '/routes/caddy.html'))
+        res.sendFile(__dirname+ '/routes/caddy.html')
     }
 );
 
