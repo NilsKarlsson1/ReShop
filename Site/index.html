@@ -19,11 +19,11 @@
             <div class="row">
                 <!-- logo -->
                 <div>
-                    <img src="assets/logo.png" class="img-fluid" alt="Responsive image" width="75" height="75">
+                    <a href="/"><img src="assets/logo.png" class="img-fluid" alt="Responsive image" width="75" height="75"></a>
                 </div>
                 <!-- titre -->
                 <div class="col-md-2 my-md-3">
-                    <h2 class="text-color">ReShop</h2>
+                    <a href="/" class="text-color" style="color:#f9f9f9"><h2 class="text-color">ReShop</h2></a>
                 </div>
                 <!-- recherche -->
                 <div class="input-group col my-md-4 mx-auto">
@@ -36,7 +36,7 @@
                 </div>
                 <!-- profile -->
                 <div>
-                    <img src="./assets/profile.png" class="img-fluid my-md-3" alt="Responsive image" width="45" height="45">
+                    <a href="/profile"><img src="./assets/profile.png" class="img-fluid my-md-3" alt="Responsive image" width="45" height="45"></a>
                 </div>
                 <div class="col-1">
                     <p class="my-md-4 text-color">
@@ -45,7 +45,7 @@
                 </div>
                 <!-- panier -->
                 <div>
-                    <img src="./assets/basket.png" class="img-fluid my-md-3" alt="Responsive image" width="45" height="45">
+                    <a href="/caddy"><img src="./assets/basket.png" class="img-fluid my-md-3" alt="Responsive image" width="45" height="45"></a>
                 </div>
                 <div class="col-1">
                     <p class="my-md-4 text-color" href="/caddy">
@@ -154,11 +154,11 @@
                 <div class="col-2">
                     <div class="container-fluid">
                         <div class="text-center">
-                            <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
+                            <img id="img_product" src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
                         </div>
                     </div>
-                    <h4 class="title-color text-center font-weight-bold">logo</h4>
-                    <p class="little-color text-center">0€</p>
+                    <h4 id="name_product" class="title-color text-center font-weight-bold">logo</h4>
+                    <p id="price_product" class="little-color text-center">0€</p>
                 </div>
                 <!-- Objet -->
                 <div class="col-2">
@@ -389,10 +389,10 @@
               <div class="modal-content">
                 <div class="modal-body">
                   <div class="notice d-flex justify-content-between align-items-center">
-                    <div class="cookie-text">This website uses cookies to personalize content and analyse traffic in order to offer you a better experience.</div>
+                    <div class="cookie-text col">Ce site web utilise les cookies pour personnaliser le contenu et analyser le trafic afin de vous offrir la meilleure expérience.</div>
                     <div class="buttons d-flex flex-column flex-lg-row">
-                      <a href="#a" class="btn btn-success btn-sm" data-dismiss="modal">I accept</a>
-                      <a href="./routes/informations.html" class="btn btn-secondary btn-sm" data-dismiss="modal">Learn More</a>
+                      <a href="#a" class="btn btn-product btn-md" data-dismiss="modal" onclick='addCookie("navigation","yes",1)'>J'accepte</a>
+                      <a href="/informations" class="btn btn-secondary btn-md" data-dismiss="modal" onclick='window.location.href="/informations"'>En savoir plus</a>
                     </div>
                   </div>
                 </div>
@@ -450,14 +450,18 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/cookies.js"></script>
     <script>
         $('.carousel').carousel({
             interval: false
         });
     </script>
     <script>
-        $(document).ready(function() {  
-        $('#cookieModal').modal('show');
+        $(document).ready(function() {
+            if(getCookie("navigation") == "") 
+            { 
+                $('#cookieModal').modal('show');
+            }
         });
     </script>
 </body>

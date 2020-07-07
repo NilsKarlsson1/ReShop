@@ -19,14 +19,11 @@
             <div class="row">
                 <!-- logo -->
                 <div>
-                    <img src="../assets/logo.png" class="img-fluid" alt="Responsive image" width="75" height="75">
+                    <a href="/"><img src="assets/logo.png" class="img-fluid" alt="Responsive image" width="75" height="75"></a>
                 </div>
                 <!-- titre -->
                 <div class="col-md-2 my-md-3">
-                    <h2 class="text-color">ReShop</h2>
-                </div>
-                <div class="my-md-3">
-                    <h2 class="text-color">Inscription</h2>
+                    <a href="/" class="text-color" style="color:#f9f9f9"><h2 class="text-color">ReShop</h2></a>
                 </div>
             </div>
         </div>
@@ -35,61 +32,61 @@
 
     <main>
         <div>
-            <div class="centrer">
+            <div class="container-fluid ">
                 <br>
                 <h2>Inscription</h2>
                 
-                <div class="row inscription_centrer">
-                <div class="col-md-4 my-md-3 inscription_centrer form_profile">
-                    <!-- civilité -->
-                <br>
-                <div class="row_profile inscription_centrer">
-                <label class="label_profil">Civilité</label>
-                <input type="checkbox" class="primary-color input_profil" id="madame">
-                <label>Madame</label>
-                <input type="checkbox" class="primary-color input_profil" id="monsieur">
-                <label>Monsieur</label>
-                </div>
-                <!-- Nom -->
-                <br>
-                <br>
-                <div class="row_profile inscription_centrer">
-                <label class="label_profil">Nom : </label>
-                <input type="text" class="form-control-md primary-color input_profil" placeholder="Nom">
-                </div>
-                <!-- Prénom -->
-                <br>
-                <br>
-                <div class="row_profile inscription_centrer">
-                <label class="label_profil">Prénom : </label>
-                <input type="text" class="form-control-md primary-color input_profil" placeholder="Prénom">
-                </div>
-                <!-- adresse mail -->
-                <br>
-                <br>
-                <div class="row_profile inscription_centrer">
-                <label class="label_profil">Adresse mail : </label>
-                <input type="text" class="form-control-md primary-color input_profil" placeholder="@mail">
-                </div>
-                <!-- mot de passe -->
-                <br>
-                <br>
-                <div class="row_profile inscription_centrer">
-                <label class="label_profil">Mot de passe : </label>
-                <input type="text" class="form-control-md primary-color input_profil" placeholder="Mot de passe">
-                </div>
-                <br>
-                <br>
-                <div class="row_profile inscription_centrer">
-                <label class="label_profil">Confirmer mot de passe : </label>
-                <input type="text" class="form-control-md primary-color input_profil" placeholder="Mot de passe">
-                </div>
-                </div>
+                <div class="row">
+                    <div class="col-md-4 my-md-3 form_profile">
+                        <!-- civilité -->
+                        <br>
+                            <div class="row_profile ">
+                            <label class="label_profil">Civilité : </label>
+                            <input type="checkbox" class="primary-color input_profil" id="madame">
+                            <label>Madame</label>
+                            <input type="checkbox" class="primary-color input_profil" id="monsieur">
+                            <label>Monsieur</label>
+                        </div>
+                        <!-- Nom -->
+                        <br>
+                        <br>
+                        <div class="row_profile ">
+                            <label class="label_profil">Nom : </label>
+                            <input id="name_inscription" type="text" class="form-control-md primary-color input_profil" placeholder="Nom" required>
+                        </div>
+                        <!-- Prénom -->
+                        <br>
+                        <br>
+                        <div class="row_profile ">
+                            <label class="label_profil">Prénom : </label>
+                            <input id="firstname_inscription" type="text" class="form-control-md primary-color input_profil" placeholder="Prénom" required>
+                        </div>
+                        <!-- adresse mail -->
+                        <br>
+                        <br>
+                        <div class="row_profile ">
+                            <label class="label_profil">Adresse mail : </label>
+                            <input id="mail_inscription" type="text" class="form-control-md primary-color input_profil" placeholder="@mail" required>
+                        </div>
+                        <!-- mot de passe -->
+                        <br>
+                        <br>
+                        <div class="row_profile ">
+                            <label class="label_profil">Mot de passe : </label>
+                            <input id="password_inscription" type="text" class="form-control-md primary-color input_profil" placeholder="Mot de passe" required>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row_profile ">
+                            <label class="label_profil">Confirmer mot de passe : </label>
+                            <input id="confirm_password" type="text" class="form-control-md primary-color input_profil" placeholder="Mot de passe" required>
+                        </div>
+                    </div>
                 </div>
                 <!-- inscription -->
                 <br>
                 <br>
-                <button class="button" type="button">
+                <button id="button_inscription" class="button" type="button">
                    Inscription
                 </button>
                 <br>
@@ -148,5 +145,14 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/cookies.js"></script>
+    <script>
+        $(document).ready(function() {
+            if(getCookie("navigation") == "") 
+            { 
+                window.location.href = "/";
+            }
+        });
+    </script>
 </body>
 </html>
