@@ -1,15 +1,15 @@
 
-#  pip3 install requests beautifulsoup4 lxml
+#  pip3 install requests beautifulsoup4 lxml mysql-connector-python
 import json
 import requests
 from bs4 import BeautifulSoup
-from pymongo import MongoClient
+import mysql.connector
 
-
-client = MongoClient("localhost", 27017)
-db = client["listArticle"]
-collection_currency = db["article"]
-
+mydb = mysql.connector.connect(
+  host="127.0.0.1",
+  user="root",
+  database="mydb"
+)
 
 def scrapingKimonoObi(avancement):
     
@@ -49,10 +49,10 @@ def scrapingKimonoObi(avancement):
             element['img'] = dataParse.find('img', {'data-index': '0'}).attrs['src']
 
         
-        if dataParse.find('div', {'class': 'description bottom ctm-full'}) is None:
+        if dataParse.find('div', {'class': 'description bottom'}) is None:
             adding = 5
         else:
-            element['description'] = dataParse.find('div', {'class': 'description bottom ctm-full'}).text
+            element['description'] = dataParse.find('div', {'class': 'description bottom'}).text
 
 
         if dataParse.find('span', {'class': 'sold_out'}) is None:
@@ -224,12 +224,16 @@ if __name__ == "__main__":
     with open("scrapingKimonoObi.json") as f:
         file_data = json.load(f)
 
+    mycursor = mydb.cursor()
+    sqlinsert = "INSERT INTO `listarticle` (titre, prix, img, description, dispo, lien, tag1, tag2, tag3) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) ON DUPLICATE KEY UPDATE lien = lien"
     for li in file_data:
-        if collection_currency.find({'lien':li['lien']}) is not None:
-             collection_currency.find_one_and_delete({'lien':li['lien']})
-        collection_currency.insert_one(li)            
-    client.close()
 
+        val = (li['titre'], li['prix'], li['img'], li['description'], li['dispo'], li['lien'], li['tag1'], li['tag2'], li['tag3'])        
+
+        mycursor.execute(sqlinsert, val)
+        mydb.commit()    
+        print(mycursor.rowcount, "record inserted.")
+    print("insert of DBZ-store successful")
 
 
 
