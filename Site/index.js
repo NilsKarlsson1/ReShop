@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname)));
 // @ts-ignore
 app.get('/', (req, res) => 
     {
-     res.sendFile(__dirname + '/home.html')
+     res.sendFile(path.join(__dirname, 'home.html'))
     }
 );
 
@@ -25,14 +25,14 @@ app.get('/', (req, res) =>
 // @ts-ignore
 app.get('/connexion', (req, res) => 
     {
-     res.sendFile(__dirname + '/routes/connexion.html')
+        res.sendFile(path.join(__dirname, '/routes/connexion.html'))
     }
 );
 
 // @ts-ignore
 app.get('/caddy', (req, res) => 
     {
-     res.sendFile(__dirname + '/routes/caddy.html')
+        res.sendFile(path.join(__dirname, '/routes/caddy.html'))
     }
 );
 
