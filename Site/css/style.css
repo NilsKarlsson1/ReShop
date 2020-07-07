@@ -77,6 +77,10 @@
     text-align: center;
 }
 
+.inscription_centrer {
+    vertical-align: middle;
+}
+
 .foot {
     position:absolute;
     bottom:0;
@@ -98,15 +102,33 @@ table {
     width: 100%;
   }
   
-  td, th {
+td, th {
     border: 1px solid #d7d7d7;
     text-align: left;
     padding: 8px;
   }
   
-  tr:nth-child(even) {
+tr:nth-child(even) {
     background-color: #d7d7d7;
   }
+
+.label_profil {
+    color: var(--dark-gray);
+    font-family: 'Open Sans';
+    display: table-cell;
+}
+
+.input_profil {
+    display: table-cell;
+}
+
+.row_profile {
+    display: table-row;
+}
+
+.form_profile {
+    display: table;
+}
 
 header{
     background-color: var(--background-color);
