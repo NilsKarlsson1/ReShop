@@ -11,6 +11,8 @@ client = new MongoClient(url, { useNewUrlParser: true });
 // @ts-ignore
 server = require('http').createServer(app);
 
+const path = require('path');
+app.use(express.static(path.join(__dirname)));
 
 // @ts-ignore
 app.get('/', (req, res) => 
