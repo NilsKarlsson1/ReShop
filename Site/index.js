@@ -11,10 +11,11 @@ client = new MongoClient(url, { useNewUrlParser: true });
 // @ts-ignore
 server = require('http').createServer(app);
 
+
 // @ts-ignore
 app.get('/', (req, res) => 
     {
-     res.sendFile(__dirname + '/index.html')
+     res.sendFile(__dirname + '/home.html')
     }
 );
 
