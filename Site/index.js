@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname)));
 // @ts-ignore
 app.get('/', (req, res) => 
     {
-     res.sendFile(path.join(__dirname, 'home.html'))
+     res.sendFile(path.join(__dirname, 'index.html'))
     }
 );
 
