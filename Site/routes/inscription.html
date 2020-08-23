@@ -103,10 +103,10 @@
             <div class="row justify-content-center">
                 <!-- recherche -->
                 <div class="input-group col-lg-4 mx-auto my-md-3">
-                    <input type="search" class="form-control form-control-md  primary-color" placeholder="Que recherchez-vous ?">
+                    <input type="search" id="search2" class="form-control form-control-md  primary-color" placeholder="Que recherchez-vous ?">
                     <div class="input-group-append">
-                      <button class="btn" type="button">
-                        <i class="fa fa-search"></i>
+                        <button class="btn" type="button" onclick="srch('2');window.location='/search';">
+                          <i class="fa fa-search"></i>
                       </button>
                     </div>
                 </div>
@@ -154,5 +154,41 @@
             }
         });
     </script>
+
+<script>
+    function cate(p){
+        if(p=='1'){
+            document.getElementById("searching").value = "figurine"
+        } 
+        if(p=='2'){
+            document.getElementById("searching").value = "vetement"
+        }
+        if(p=='3'){
+            document.getElementById("searching").value = "décoration"
+        }
+        if(p=='4'){
+            document.getElementById("searching").value = "accessoire"
+        }
+        if(p=='5'){
+            document.getElementById("searching").value = "jeu"
+        }
+        document.getElementById("btnS").click();
+    }
+    
+    </script>
+<script>
+    function srch(p){
+      deleteCookie("elem");
+      if(p=='1'){
+          var feild = document.getElementById("searching").value
+          addCookie("elem", feild );
+      } else {
+          var feild = document.getElementById("search2").value
+          addCookie("elem", feild );
+      }
+      
+          
+    }
+</script>
 </body>
 </html>

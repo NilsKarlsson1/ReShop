@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -27,10 +29,10 @@
                 </div>
                 <!-- recherche -->
                 <div class="input-group col my-md-4 mx-auto">
-                    <input type="search" class="form-control form-control-md  primary-color" placeholder="Que recherchez-vous ?">
+                    <input type="search" class="form-control form-control-md  primary-color" id="searching" placeholder="Que recherchez-vous ?">
                     <div class="input-group-append">
-                      <button class="btn" type="button">
-                        <i class="fa fa-search" onclick="window.location='/search';"></i>
+                      <button class="btn" type="button" id="btnS" onclick="srch('1');window.location='/search';">
+                        <i class="fa fa-search"></i>
                       </button>
                     </div>
                 </div>
@@ -62,73 +64,41 @@
                 <!-- Figurines -->
                 <div class="col-1">
                     <div class="btn-group" role="group">
-                        <button id="btnDropFig" type="button" class="btn button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button id="btnDropFig" type="button" class="btn button" aria-haspopup="true" aria-expanded="false" onclick="cate(1)">
                           Figurines
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="btnDropFig">
-                          <a class="dropdown-item " href="#">Dragon Ball</a>
-                          <a class="dropdown-item" href="#">Naruto</a>
-                          <a class="dropdown-item" href="#">One Piece</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Autre</a>
-                        </div>
                       </div>
                 </div>
                 <!-- Vêtements -->
                 <div class="col-1">
                     <div class="btn-group" role="group">
-                        <button id="btnDropvet" type="button" class="btn button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button id="btnDropvet" type="button" class="btn button" aria-haspopup="true" aria-expanded="false" onclick="cate(2)">
                           Vêtements
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="btnDropvet">
-                          <a class="dropdown-item font-weight-bold" href="#">Homme</a>
-                          <a class="dropdown-item" href="#"></a>
-                          <a class="dropdown-item" href="#"></a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item font-weight-bold" href="#">Femme</a>
-                          <a class="dropdown-item" href="#"></a>
-                          <a class="dropdown-item" href="#"></a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item font-weight-bold" href="#">Enfant</a>
-                          <a class="dropdown-item" href="#"></a>
-                          <a class="dropdown-item" href="#"></a>
-                        </div>
                     </div>
                 </div>
                 <!-- Décoration -->
                 <div class="col-1">
                     <div class="btn-group" role="group">
-                        <button id="btnDropDeco" type="button" class="btn button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button id="btnDropDeco" type="button" class="btn button" aria-haspopup="true" aria-expanded="false"onclick="cate(3)">
                           Décoration
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="btnDropDeco">
-                          <a class="dropdown-item" href="#"></a>
-                          <a class="dropdown-item" href="#"></a>
-                        </div>
                     </div>
                 </div>
                 <!-- Accessoires -->
                 <div class="col-1">
                     <div class="btn-group" role="group">
-                        <button id="btnDropAccess" type="button" class="btn button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button id="btnDropAccess" type="button" class="btn button"aria-haspopup="true" aria-expanded="false" onclick="cate(4)">
                             Accessoires
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="btnDropAccess">
-                            <a class="dropdown-item" href="#"></a>
-                            <a class="dropdown-item" href="#"></a>
-                        </div>
                     </div>
                 </div>
                 <!-- Jeux -->
                 <div class="col-1">
                     <div class="btn-group" role="group">
-                        <button id="btnDropJeux" type="button" class="btn button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button id="btnDropJeux" type="button" class="btn button" aria-haspopup="true" aria-expanded="false"onclick="cate(5)">
                             Jeux
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="btnDropJeux">
-                            <a class="dropdown-item" href="#"></a>
-                            <a class="dropdown-item" href="#"></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -139,247 +109,8 @@
             <!-- bloc nouveauté -->
             <h1 class="text-left col">Nouveauté</h1>
             <!-- 1 ligne -->
-            <div class="row justify-content-center">
-                <!-- Objet -->
-                <div class="col-2">
-                    <div class="container-fluid" >
-                        <div class="text-center">
-                            <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100" id="test">
-                        </div>
-                    </div>
-                    <h4 class="title-color text-center font-weight-bold">logo</h4>
-                    <p class="little-color text-center">0€</p>
-                </div>
-                <!-- Objet -->
-                <div class="col-2">
-                    <div class="container-fluid">
-                        <div class="text-center">
-                            <img id="img_product" src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                        </div>
-                    </div>
-                    <h4 id="name_product" class="title-color text-center font-weight-bold">logo</h4>
-                    <p id="price_product" class="little-color text-center">0€</p>
-                </div>
-                <!-- Objet -->
-                <div class="col-2">
-                    <div class="container-fluid">
-                        <div class="text-center">
-                            <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                        </div>
-                    </div>
-                    <h4 class="title-color text-center font-weight-bold">logo</h4>
-                    <p class="little-color text-center">0€</p>
-                </div>
-                <!-- Objet -->
-                <div class="col-2">
-                    <div class="container-fluid">
-                        <div class="text-center">
-                            <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                        </div>
-                    </div>
-                    <h4 class="title-color text-center font-weight-bold">logo</h4>
-                    <p class="little-color text-center">0€</p>
-                </div>
-                <!-- Objet -->
-                <div class="col-2">
-                    <div class="container-fluid">
-                        <div class="text-center">
-                            <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                        </div>
-                    </div>
-                    <h4 class="title-color text-center font-weight-bold">logo</h4>
-                    <p class="little-color text-center">0€</p>
-                </div>
-            </div>
-            
-            <!-- bloc figurines -->
-            <h1 class="text-left col">Figurines</h1>
-            
-            <!-- carousel -->
-            <div class="container-fluid">
-                <div id="multi-item" class="carousel slide">
-                     <!-- Contrôles -->
-                     <div class="row justify-content-center">
-                        <div class="col-10">
-                            <a class="btn-sm btn-carousel-prev btn-danger" href="#multi-item" data-slide="prev">
-                                <i class="fa fa-chevron-left"></i>
-                            </a>
-                        </div>
-                        <div class="text-right">
-                            <a class="btn-sm btn-carousel-next btn-danger" href="#multi-item" data-slide="next">
-                                <i class="fa fa-chevron-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                 <!-- Slides -->
-                  <div class="carousel-inner">
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active">
-                      <div class="row justify-content-center">
-                            <!-- Objet -->
-                                <div class="col-2">
-                                    <div class="text-center">
-                                        <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                                        <div class="card-body">
-                                            <h4 class="title-color text-center font-weight-bold">logo 1</h4>
-                                            <p class="little-color text-center">0€</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            <!-- Objet -->
-                                <div class="col-2">
-                                    <div class="text-center">
-                                        <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                                        <div class="card-body">
-                                            <h4 class="title-color text-center font-weight-bold">logo 2</h4>
-                                            <p class="little-color text-center">0€</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            <!-- Objet -->
-                                <div class="col-2">
-                                    <div class="text-center">
-                                        <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                                        <div class="card-body">
-                                            <h4 class="title-color text-center font-weight-bold">logo 3</h4>
-                                            <p class="little-color text-center">0€</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            <!-- Objet -->
-                                <div class="col-2">
-                                    <div class="text-center">
-                                        <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                                        <div class="card-body">
-                                            <h4 class="title-color text-center font-weight-bold">logo 4</h4>
-                                            <p class="little-color text-center">0€</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            <!-- Objet -->
-                                <div class="col-2">
-                                    <div class="text-center">
-                                        <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                                        <div class="card-body">
-                                            <h4 class="title-color text-center font-weight-bold">logo 5</h4>
-                                            <p class="little-color text-center">0€</p>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="carousel-item">
-                      <div class="row justify-content-center">
-                        <!-- Objet -->
-                        <div class="col-2">
-                            <div class="text-center">
-                                <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                                <div class="card-body">
-                                    <h4 class="title-color text-center font-weight-bold">logo 6</h4>
-                                    <p class="little-color text-center">0€</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Objet -->
-                        <div class="col-2">
-                            <div class="text-center">
-                                <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                                <div class="card-body">
-                                    <h4 class="title-color text-center font-weight-bold">logo 7</h4>
-                                    <p class="little-color text-center">0€</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Objet -->
-                        <div class="col-2">
-                            <div class="text-center">
-                                <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                                <div class="card-body">
-                                    <h4 class="title-color text-center font-weight-bold">logo 8</h4>
-                                    <p class="little-color text-center">0€</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Objet -->
-                        <div class="col-2">
-                            <div class="text-center">
-                                <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                                <div class="card-body">
-                                    <h4 class="title-color text-center font-weight-bold">logo 9</h4>
-                                    <p class="little-color text-center">0€</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Objet -->
-                        <div class="col-2">
-                            <div class="text-center">
-                                <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                                <div class="card-body">
-                                    <h4 class="title-color text-center font-weight-bold">logo 10</h4>
-                                    <p class="little-color text-center">0€</p>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Slide 3-->
-                    <div class="carousel-item">
-                      <div class="row justify-content-center">
-                          <!-- Objet -->
-                        <div class="col-2">
-                            <div class="text-center">
-                                <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                                <div class="card-body">
-                                    <h4 class="title-color text-center font-weight-bold">logo 11</h4>
-                                    <p class="little-color text-center">0€</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Objet -->
-                        <div class="col-2">
-                            <div class="text-center">
-                                <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                                <div class="card-body">
-                                    <h4 class="title-color text-center font-weight-bold">logo 12</h4>
-                                    <p class="little-color text-center">0€</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Objet -->
-                        <div class="col-2">
-                            <div class="text-center">
-                                <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                                <div class="card-body">
-                                    <h4 class="title-color text-center font-weight-bold">logo 13</h4>
-                                    <p class="little-color text-center">0€</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Objet -->
-                        <div class="col-2">
-                            <div class="text-center">
-                                <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                                <div class="card-body">
-                                    <h4 class="title-color text-center font-weight-bold">logo 14</h4>
-                                    <p class="little-color text-center">0€</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Objet -->
-                        <div class="col-2">
-                            <div class="text-center">
-                                <img src="./assets/logo.png" class="center-block" alt="" width="100" height="100">
-                                <div class="card-body">
-                                    <h4 class="title-color text-center font-weight-bold">logo 15</h4>
-                                    <p class="little-color text-center">0€</p>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="row justify-content-center" id="personinfo">
+                
             </div>
         </div>
 
@@ -406,10 +137,10 @@
             <div class="row justify-content-center">
                 <!-- recherche -->
                 <div class="input-group col-lg-4 mx-auto my-md-3">
-                    <input type="search" class="form-control form-control-md  primary-color" placeholder="Que recherchez-vous ?">
+                    <input type="search" id="search2" class="form-control form-control-md  primary-color" placeholder="Que recherchez-vous ?">
                     <div class="input-group-append">
-                      <button class="btn" type="button">
-                        <i class="fa fa-search"></i>
+                        <button class="btn" type="button" onclick="srch('2');window.location='/search';">
+                          <i class="fa fa-search"></i>
                       </button>
                     </div>
                 </div>
@@ -455,6 +186,7 @@
 
 
     <script>
+        
         $('.carousel').carousel({
             interval: false
         });
@@ -467,5 +199,81 @@
             }
         });
     </script>
+
+
+<script>
+    var baseurl = "http://localhost:8081/product";
+    function loadArticles(){
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET",baseurl + "/search?name=",true);
+      xmlhttp.onreadystatechange = function() {
+        if(xmlhttp.readyState ===4 && xmlhttp.status ===200){
+          var articles = JSON.parse(xmlhttp.responseText);
+          
+          
+          //main table content we fill from data from the rest call
+          var main ="";
+          for (i = 0; i < articles.length; i++){
+            var tmp = "choisi('"+articles[i].lien+"')";
+            main += '<div class="col-2"><div class="container-fluid"><div class="text-center"><img id="img_product" src='+articles[i].img+' class="center-block" alt="" width="100" height="100" ></div></div><h4 id="name_product" class="title-color text-center font-weight-bold" onclick="'+tmp+'">'+articles[i].titre+'</h4><p id="price_product" class="little-color text-center">'+articles[i].prix+'</p></div>';
+          }
+          
+          document.getElementById("personinfo").innerHTML = main;
+        }
+      };
+      xmlhttp.send();
+    }
+    window.onload = function(){
+        loadArticles();
+    }
+  </script>
+
+<script>
+function cate(p){
+    if(p=='1'){
+        document.getElementById("searching").value = "figurine"
+    } 
+    if(p=='2'){
+        document.getElementById("searching").value = "vetement"
+    }
+    if(p=='3'){
+        document.getElementById("searching").value = "décoration"
+    }
+    if(p=='4'){
+        document.getElementById("searching").value = "accessoire"
+    }
+    if(p=='5'){
+        document.getElementById("searching").value = "jeu"
+    }
+    document.getElementById("btnS").click();
+}
+
+</script>
+
+
+
+
+  <script>
+
+      function srch(p){
+        deleteCookie("elem");
+        if(p=='1'){
+            var feild = document.getElementById("searching").value
+            addCookie("elem", feild );
+        } else {
+            var feild = document.getElementById("search2").value
+            addCookie("elem", feild );
+        }
+        
+            
+      }
+  </script>
+  <script>
+    function choisi(p){
+        deleteCookie("choix");
+        addCookie("choix", p );
+        window.location.href = "/product";
+    }
+</script>
 </body>
 </html>

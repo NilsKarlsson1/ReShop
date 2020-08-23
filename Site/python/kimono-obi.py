@@ -46,7 +46,7 @@ def scrapingKimonoObi(avancement):
         if dataParse.find('img', {'data-index': '0'}) is None:
             adding = 4
         else:
-            element['img'] = dataParse.find('img', {'data-index': '0'}).attrs['src']
+            element['img'] = dataParse.find('a',{'class': 'lightbox'}).attrs['href']
 
         
         if dataParse.find('div', {'class': 'description bottom'}) is None:

@@ -81,7 +81,7 @@ Produit.findByTag = (tag, result) => {
 
 Produit.findByName = (Name, result) => {
     // @ts-ignore
-    ArticleDB.query(`SELECT * FROM listarticle WHERE titre LIKE '%${Name}%' OR tag2 LIKE '%${Name}%' OR tag3 LIKE '%${Name}%`, (err, res) => {
+    ArticleDB.query(`SELECT * FROM listarticle WHERE titre LIKE '%${Name}%' OR tag2 LIKE '%${Name}%' OR tag3 LIKE '%${Name}%'`, (err, res) => {
       if (err) {
         console.log("error: ", err);
         result(err, null);
@@ -353,7 +353,7 @@ app.get('/product/look', (req, res) => {
     // @ts-ignore
 app.get('/product/search', (req, res) => {
     // @ts-ignore
-    Produit.findByTag(req.query.name, (err, data) => {
+    Produit.findByName(req.query.name, (err, data) => {
       if (err) {
         if (err.kind === "not_found") {
           res.status(404).send({
