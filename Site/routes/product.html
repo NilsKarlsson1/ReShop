@@ -27,10 +27,10 @@
                 </div>
                 <!-- recherche -->
                 <div class="input-group col my-md-4 mx-auto">
-                    <input type="search" class="form-control form-control-md  primary-color" placeholder="Que recherchez-vous ?">
+                    <input type="search" class="form-control form-control-md  primary-color" id="searching" placeholder="Que recherchez-vous ?">
                     <div class="input-group-append">
-                      <button class="btn" type="button">
-                        <i class="fa fa-search" onclick="window.location='/search';"></i>
+                      <button class="btn" type="button" id="btnS" onclick="srch(1);window.location='/search';">
+                        <i class="fa fa-search"></i>
                       </button>
                     </div>
                 </div>
@@ -58,87 +58,55 @@
 
     <!-- Subheader -->
     <div class="subheader">
-            <div class="row justify-content-center">
-                <!-- Figurines -->
-                <div class="col-1">
-                    <div class="btn-group" role="group">
-                        <button id="btnDropFig" type="button" class="btn button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Figurines
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="btnDropFig">
-                          <a class="dropdown-item " href="#">Dragon Ball</a>
-                          <a class="dropdown-item" href="#">Naruto</a>
-                          <a class="dropdown-item" href="#">One Piece</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Autre</a>
-                        </div>
-                      </div>
-                </div>
-                <!-- Vêtements -->
-                <div class="col-1">
-                    <div class="btn-group" role="group">
-                        <button id="btnDropvet" type="button" class="btn button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Vêtements
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="btnDropvet">
-                          <a class="dropdown-item font-weight-bold" href="#">Homme</a>
-                          <a class="dropdown-item" href="#"></a>
-                          <a class="dropdown-item" href="#"></a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item font-weight-bold" href="#">Femme</a>
-                          <a class="dropdown-item" href="#"></a>
-                          <a class="dropdown-item" href="#"></a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item font-weight-bold" href="#">Enfant</a>
-                          <a class="dropdown-item" href="#"></a>
-                          <a class="dropdown-item" href="#"></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Décoration -->
-                <div class="col-1">
-                    <div class="btn-group" role="group">
-                        <button id="btnDropDeco" type="button" class="btn button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Décoration
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="btnDropDeco">
-                          <a class="dropdown-item" href="#"></a>
-                          <a class="dropdown-item" href="#"></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Accessoires -->
-                <div class="col-1">
-                    <div class="btn-group" role="group">
-                        <button id="btnDropAccess" type="button" class="btn button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Accessoires
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="btnDropAccess">
-                            <a class="dropdown-item" href="#"></a>
-                            <a class="dropdown-item" href="#"></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Jeux -->
-                <div class="col-1">
-                    <div class="btn-group" role="group">
-                        <button id="btnDropJeux" type="button" class="btn button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Jeux
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="btnDropJeux">
-                            <a class="dropdown-item" href="#"></a>
-                            <a class="dropdown-item" href="#"></a>
-                        </div>
-                    </div>
+        <div class="row justify-content-center">
+            <!-- Figurines -->
+            <div class="col-1">
+                <div class="btn-group" role="group">
+                    <button id="btnDropFig" type="button" class="btn button" aria-haspopup="true" aria-expanded="false" onclick="cate(1)">
+                      Figurines
+                    </button>
+                  </div>
+            </div>
+            <!-- Vêtements -->
+            <div class="col-1">
+                <div class="btn-group" role="group">
+                    <button id="btnDropvet" type="button" class="btn button" aria-haspopup="true" aria-expanded="false" onclick="cate(2)">
+                      Vêtements
+                    </button>
                 </div>
             </div>
+            <!-- Décoration -->
+            <div class="col-1">
+                <div class="btn-group" role="group">
+                    <button id="btnDropDeco" type="button" class="btn button" aria-haspopup="true" aria-expanded="false"onclick="cate(3)">
+                      Décoration
+                    </button>
+                </div>
+            </div>
+            <!-- Accessoires -->
+            <div class="col-1">
+                <div class="btn-group" role="group">
+                    <button id="btnDropAccess" type="button" class="btn button"aria-haspopup="true" aria-expanded="false" onclick="cate(4)">
+                        Accessoires
+                    </button>
+                </div>
+            </div>
+            <!-- Jeux -->
+            <div class="col-1">
+                <div class="btn-group" role="group">
+                    <button id="btnDropJeux" type="button" class="btn button" aria-haspopup="true" aria-expanded="false"onclick="cate(5)">
+                        Jeux
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
 
     <main>
         <div class="row">
             <div class="product">
-                <img class="product" src="../assets/logo.png" alt="" id="product_img">
+                <img class="product" src="" alt="" id="product_img">
             </div>
             <div class="description">
                 <p id="product_desc">description du produit.</p>
@@ -158,10 +126,10 @@
             <div class="row justify-content-center">
                 <!-- recherche -->
                 <div class="input-group col-lg-4 mx-auto my-md-3">
-                    <input type="search" class="form-control form-control-md  primary-color" placeholder="Que recherchez-vous ?">
+                    <input type="search" id="search2" class="form-control form-control-md  primary-color" placeholder="Que recherchez-vous ?">
                     <div class="input-group-append">
-                      <button class="btn" type="button">
-                        <i class="fa fa-search"></i>
+                        <button class="btn" type="button" onclick="srch('2');window.location='/search';">
+                          <i class="fa fa-search"></i>
                       </button>
                     </div>
                 </div>
@@ -209,5 +177,71 @@
             }
         });
     </script>
+
+<script>
+    var baseurl = "http://localhost:8081/product";
+    function loadArticles(){
+      var xmlhttp = new XMLHttpRequest();
+      var srch = getCookie("choix");
+      xmlhttp.open("GET",baseurl + "/by?lien="+srch,true);
+      xmlhttp.onreadystatechange = function() {
+        if(xmlhttp.readyState ===4 && xmlhttp.status ===200){
+          var articles = JSON.parse(xmlhttp.responseText);
+          
+          
+          //main table content we fill from data from the rest call
+          var main ="";
+          
+          console.log(articles.img);
+          document.getElementById("product_img").setAttribute("src", articles.img);
+          document.getElementById("product_desc").textContent = articles.description;
+          document.getElementById("price").textContent = articles.prix;
+        }
+      };
+      xmlhttp.send();
+    }
+    window.onload = function(){
+        loadArticles();
+        
+    }
+  </script>
+
+
+<script>
+    function cate(p){
+        if(p=='1'){
+            document.getElementById("searching").value = "figurine"
+        } 
+        if(p=='2'){
+            document.getElementById("searching").value = "vetement"
+        }
+        if(p=='3'){
+            document.getElementById("searching").value = "décoration"
+        }
+        if(p=='4'){
+            document.getElementById("searching").value = "accessoire"
+        }
+        if(p=='5'){
+            document.getElementById("searching").value = "jeu"
+        }
+        document.getElementById("btnS").click();
+    }
+    
+    </script>
+
+<script>
+    function srch(p){
+      deleteCookie("elem");
+      if(p=='1'){
+          var feild = document.getElementById("searching").value
+          addCookie("elem", feild );
+      } else {
+          var feild = document.getElementById("search2").value
+          addCookie("elem", feild );
+      }
+      
+          
+    }
+</script>
 </body>
 </html>
