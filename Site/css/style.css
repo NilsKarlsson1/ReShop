@@ -137,3 +137,11 @@ footer{
     color: var(--dark-gray);
     font-family: 'Open Sans';
 }
+
+.footer_connexion {
+    position: absolute;
+    bottom: 0;
+    background-color: #d7d7d7;
+    color: var(--dark-gray);
+    font-family: 'Open Sans';
+}
