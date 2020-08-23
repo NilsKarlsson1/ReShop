@@ -113,7 +113,7 @@
                 <br>
                 <h6 id="price">XX euros</h6>
                 <br>
-                <button class="btn-product" type="button" id="button-caddy">
+                <button class="btn-product" type="button" id="button-caddy" onclick="piano()">
                    Ajouter au panier
                 </button>
             </div>
@@ -192,7 +192,6 @@
           //main table content we fill from data from the rest call
           var main ="";
           
-          console.log(articles.img);
           document.getElementById("product_img").setAttribute("src", articles.img);
           document.getElementById("product_desc").textContent = articles.description;
           document.getElementById("price").textContent = articles.prix;
@@ -241,6 +240,18 @@
       }
       
           
+    }
+</script>
+
+<script>
+    
+    function piano(){
+        
+        var tmp = getCookie("piano");
+        deleteCookie("piano");
+        var ne = getCookie("choix")
+        addCookie("piano", tmp+","+ne);
+        window.alert("Cet article a été ajouté au panier, vous pouvez en augmenter la quantité voulue dans ce dernier");
     }
 </script>
 </body>
